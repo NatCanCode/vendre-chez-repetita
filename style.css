@@ -1,0 +1,298 @@
+/* #F2F0F3 light grey */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.flex{
+    display: flex;
+}
+body{
+    background-color: #F2F0F3;
+    font-family: 'Montserrat', sans-serif;
+    color: #777777;
+    font-style: regular;
+    font-size: clamp(14px, 10vw, 16px);
+    line-height: 1.5;
+    cursor: none;
+    padding: 5%;
+    cursor: auto;
+}
+img{
+    /* garder ratio d'une image  */
+    object-fit: cover;
+    display: block;
+    max-width: 100%; /* si elle n'a plus la place, elle va se reduire */
+}
+/* div{
+    height: auto;
+} */
+h1{
+    font-size: clamp(24px, 10vw, 48px);
+}
+h2{
+    font-size: clamp(22px, 10vw, 32px);
+}
+h3{
+    font-size: clamp(18px, 10vw, 28px);
+}
+p{
+    font-size: clamp(14px, 10vw, 16px);
+    padding-top: 8%;
+}
+.white{
+    color: #FFFFFF;
+}
+.red{
+    color: #E85F5B;
+}
+.green{
+    color: #53A790;
+}
+.blue{
+    color: #2445A2;
+}
+.grey{
+    color: #777777;
+}
+/* button{
+    width: 50%;
+    border: none;
+    background-color: #FFFFFF;
+    padding: 1% 3% 1% 3%;
+    transition: background-color .5s;
+    font-family: 'Montserrat', sans-serif;
+    color: #777777;
+    font-size: clamp(14px, 10vw,16px);
+    font-weight: 700;
+    line-height: 30px;
+    justify-content: center;
+    align-self: center;
+}
+button:hover{
+    color: #FFFFFF;
+    background-color: #E85F5B;
+    cursor: pointer;
+}
+button a{
+    color: #777777;
+} */
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: #FFFFFF;
+}
+li{
+    list-style: none;
+    font-size: clamp(14px, 10vw, 16px);
+}
+
+/* ORIGAMI HEADER BANNER */
+.origami-header-banner-shop-background{
+    background-position: center;
+    background: url('./img/femme-ordinateur.png') no-repeat center / cover;
+    /* always set a background-color if image is not available: */
+    background-color: #F1DA88;
+    border-radius: 100px;
+    opacity: 90%;
+}
+.content{
+    padding: 200px 10%;
+}
+.title-container{
+    text-align: center;
+}
+.title{
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+/* BREAK */
+.break{
+    height: 10vh;
+}
+
+/* GRID */
+.vendre-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: .9fr .4fr .9fr .9fr .4fr ;
+    grid-template-areas:
+    "vendre vendre-pic"
+    "commission-pic commission"
+    "vite vite-pic"
+    "entente-pic entente"
+    "contact contact-pic";
+}
+
+/* VENDRE */
+.vendre{
+    border-radius: 100px 0px 0px 0px;
+    grid-area: vendre;
+    background-color: #53A790;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100%;
+    width: 100%;
+}
+.vendre p{
+    padding-top: 4%;
+}
+.vendre-pic{
+    grid-area: vendre-pic;
+    width: 100%;
+}
+
+/* COMMISSION */
+.commission{
+    grid-area: commission;
+    background-color: #F1DA88;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100%;
+    width: 100%;
+}
+.commission-pic{
+    grid-area: commission-pic;
+    width: 100%;
+}
+
+/* VITE */
+.vite{
+    grid-area: vite;
+    background-color: #E85F5B;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100%;
+    width: 100%;
+}
+.vite-pic{
+    grid-area: vite-pic;
+    width: 100%;
+}
+/* .environnement button{
+    margin-top: 8%;
+} */
+
+/* ENTENTE */
+.entente{
+    grid-area: entente;
+    background-color: #53A790;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100%;
+    width: 100%;
+}
+.entente-pic{
+    grid-area: entente-pic;
+    width: 100%;
+}
+
+/* CONTACT */
+.contact{
+    grid-area: contact;
+    background-color: #F1DA88;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100%;
+    width: 100%;
+}
+.contact p{
+    padding-top: 4%;
+}
+.contact-pic{
+    grid-area: contact-pic;
+    width: 100%;
+    border-radius: 0px 0px 100px 0px;
+}
+
+/* MEDIA QUERIES */
+/* iPad Pro */
+@media screen and (max-width: 1024px){
+    .engagements-grid{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: .5fr .5fr .4fr .4fr .7fr .7fr .65fr .65fr .4fr .4fr;
+        grid-template-areas:
+        "intro-engagements" 
+        "intro-engagements-pic"
+        "industrie"
+        "industrie-pic"
+        "environnement"
+        "environnement-pic"
+        "environnemental"
+        "environnemental-pic"
+        "contact"
+        "contact-pic";
+    }
+    /* "vendre vendre-pic"
+    "commission-pic commission"
+    "vite vite-pic"
+    "entente-pic entente"
+    "contact contact-pic" */
+    .origami-header-banner-shop-background, .intro-engagements, .contact-pic{
+        border-radius: 0px;
+    }
+    h1, h2{
+        text-align: center;
+    }
+}
+/* iPad Air */
+@media screen and (max-width: 820px){ 
+    .engagements-grid{
+        grid-template-rows: .6fr .6fr .45fr .45fr .9fr .9fr .8fr .8fr .5fr .5fr;
+    }
+}
+/* iPad Mini */
+@media screen and (max-width: 768px){
+    .engagements-grid{
+        grid-template-rows: .7fr .7fr .55fr .55fr .95fr .95fr .85fr .85fr .55fr .55fr;
+    }
+}
+/* iPhone XR */
+@media screen and (max-width: 414px){
+    .content{
+        padding: 100px 10%;
+    }
+    .engagements-grid{
+            grid-template-rows: 1.8fr .8fr 1.2fr .5fr 2.6fr 1fr 2fr .7fr 1.3fr .6fr;
+    }
+}
+/* iPhone 12 Pro */
+@media screen and (max-width: 390px){
+    .engagements-grid{
+            grid-template-rows: 1.9fr .9fr 1.3fr .6fr 2.8fr 1fr 2.15fr .7fr 1.4fr .6fr;
+    }
+}
+@media screen and (max-width: 375px){
+    .engagements-grid{
+        grid-template-rows: 2fr .9fr 1.4fr .6fr 3fr 1fr 2.5fr .7fr 1.5fr .6fr;
+    }
+}
+
+/* Breakpoints - most common screen size devices used in 2021:
+1920×1080
+1366×768 
+360×640 => Galaxy S5
+414×896 => iPhone 6/7/8+
+1536×864
+375×667 => iPhone X
+768x1024 => iPad 
+1024x1366 => iPad pro */
+
+
