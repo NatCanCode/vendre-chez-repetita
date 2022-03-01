@@ -122,7 +122,7 @@ li{
 .vendre-grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: .9fr .4fr .9fr .9fr .4fr ;
+	grid-template-rows: .9fr .4fr .9fr .9fr .4fr;
     grid-template-areas:
     "vendre vendre-pic"
     "commission-pic commission"
@@ -225,27 +225,22 @@ li{
 /* MEDIA QUERIES */
 /* iPad Pro */
 @media screen and (max-width: 1024px){
-    .engagements-grid{
+    .vendre-grid{
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: .5fr .5fr .4fr .4fr .7fr .7fr .65fr .65fr .4fr .4fr;
         grid-template-areas:
-        "intro-engagements" 
-        "intro-engagements-pic"
-        "industrie"
-        "industrie-pic"
-        "environnement"
-        "environnement-pic"
-        "environnemental"
-        "environnemental-pic"
+        "vendre" 
+        "vendre-pic"
+        "commission"
+        "commission-pic"
+        "vite"
+        "vite-pic"
+        "entente"
+        "entente-pic"
         "contact"
         "contact-pic";
     }
-    /* "vendre vendre-pic"
-    "commission-pic commission"
-    "vite vite-pic"
-    "entente-pic entente"
-    "contact contact-pic" */
-    .origami-header-banner-shop-background, .intro-engagements, .contact-pic{
+    .origami-header-banner-shop-background, .vendre, .contact-pic{
         border-radius: 0px;
     }
     h1, h2{
@@ -254,13 +249,13 @@ li{
 }
 /* iPad Air */
 @media screen and (max-width: 820px){ 
-    .engagements-grid{
+    .vendre-grid{
         grid-template-rows: .6fr .6fr .45fr .45fr .9fr .9fr .8fr .8fr .5fr .5fr;
     }
 }
 /* iPad Mini */
 @media screen and (max-width: 768px){
-    .engagements-grid{
+    .vendre-grid{
         grid-template-rows: .7fr .7fr .55fr .55fr .95fr .95fr .85fr .85fr .55fr .55fr;
     }
 }
@@ -269,18 +264,18 @@ li{
     .content{
         padding: 100px 10%;
     }
-    .engagements-grid{
+    .vendre-grid{
             grid-template-rows: 1.8fr .8fr 1.2fr .5fr 2.6fr 1fr 2fr .7fr 1.3fr .6fr;
     }
 }
 /* iPhone 12 Pro */
 @media screen and (max-width: 390px){
-    .engagements-grid{
+    .vendre-grid{
             grid-template-rows: 1.9fr .9fr 1.3fr .6fr 2.8fr 1fr 2.15fr .7fr 1.4fr .6fr;
     }
 }
 @media screen and (max-width: 375px){
-    .engagements-grid{
+    .vendre-grid{
         grid-template-rows: 2fr .9fr 1.4fr .6fr 3fr 1fr 2.5fr .7fr 1.5fr .6fr;
     }
 }
